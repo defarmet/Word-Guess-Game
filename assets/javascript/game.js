@@ -1,6 +1,6 @@
 var word = {
 	word: "",
-	words: ["Linux", "UNIX", "Macintosh", "Apple", "Windows", "Microsoft", "Terminal", "Bash"],
+	words: ["Linux", "UNIX", "Macintosh", "Apple", "Windows", "Microsoft", "Terminal", "Bash", "CPU", "Laptop", "Desktop", "RAM"],
 	word_count: -1,
 	guessed_letters: [],
 	guessed: true,
@@ -15,6 +15,7 @@ var word = {
 			this.words[i] = this.words[j];
 			this.words[j] = x;
 		}
+		this.output.textContent = ">";
 	},
 
 	next_word() {
@@ -66,7 +67,7 @@ var word = {
 	},
 
 	write: function() {
-		var word_output = "";
+		var word_output = "> ";
 		for (var i = 0; i < this.word.length; i++) {
 			var letter = this.word[i].toLowerCase();
 			var write_letter = false;
